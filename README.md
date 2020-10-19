@@ -1,5 +1,5 @@
 # docker-scan-targets
-Quickly create Docker targets for scans
+Quickly create Docker targets for scans. Assumes you already have Docker installed (recent versions of Kali include Docker).
 
 ## Usage
 
