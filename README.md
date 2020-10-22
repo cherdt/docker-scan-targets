@@ -1,6 +1,10 @@
 # docker-scan-targets
 Quickly create Docker targets for scans. Assumes you already have Docker installed (recent versions of Kali include Docker).
 
+## Limitations
+
+This currently only works on Linux systems on x86_64 architecture.
+
 ## Usage
 
 ### 
@@ -15,10 +19,14 @@ Other targets include
 
     make dvwa
 
+Note that DVWA runs on port 80, http://localhost
+
 ### Joomla
 
     make setup
     make joomla
+
+Joomla runs on port 8000, at http://localhost:8000
 
 ### To see all options
 
