@@ -18,6 +18,10 @@ dvwa:
 	@read RESPONSEVAR
 	sudo docker run --rm -it -p 80:80 vulnerables/web-dvwa
 
+mutillidae:
+	@echo "Mutillidae runs on http://localhost:80"
+	sudo docker run --rm -it -p 80:80 citizenstig/nowasp
+
 joomla:
 	@echo "The database hostname is:    db"
 	@echo "    The database name is:    joomla"
