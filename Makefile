@@ -4,6 +4,7 @@ help:
 	@echo "    make clean - removes Docker containers"
 	@echo "    make dvwa - runs the Damn Vulnerable Web Application"
 	@echo "    make joomla - runs Joomla"
+	@echo "    make nessus - runs Nessus"
 	@echo "    make wordpress - runs Wordpress"
 
 clean:
@@ -31,6 +32,10 @@ joomla:
 	@read RESPONSEVAR
 	sudo docker-compose -p joomla -f joomla-compose.yml up
 
+nessus:
+	@echo "Nessus runs on https://localhost:8834"
+	sudo docker run -p 8834:8834 tenableofficial/nessus
+	
 setup:
 	@echo "Installing Docker Compose..."
 	sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-Linux-x86_64" -o /usr/local/bin/docker-compose
